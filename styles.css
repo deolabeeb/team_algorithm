@@ -28,9 +28,11 @@
     z-index: 1000;
   }
   
-  .nav-list {
+  .nav-list li {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    margin: auto;
+    transition: color 0.3s ease-in-out;
   }
   
   .nav-list a {
