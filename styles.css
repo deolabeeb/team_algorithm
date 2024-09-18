@@ -1,123 +1,194 @@
 /* Variables */
 :root {
-    --main-white: #f0f0f0;
-    --main-red: #be3144;
-    --main-blue: #45567d;
-    --main-gray: #303841;
-  }
-  
-  /* General Styles */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #181719;
-    color: var(--main-white);
-    margin: 0;
-  }
-  
-  h1, h2 {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-  }
-  
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #181719;
+  color: var(--main-white);
+  margin: 0;
+  padding: 0;
+  padding-top: 4rem; /* Adjust this based on the height of your nav bar */
+}
+
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--main-red);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows wrapping of nav items on smaller screens */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  list-style: none;
+  margin: 0.5rem 0; /* Adds space between items in mobile view */
+}
+
+.nav-list a {
+  color: var(--main-white);
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  text-align: center;
+  padding: 2rem;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 2rem;
+  color: var(--main-red);
+}
+
+.courses-section, .reviews-section, .contact-section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.course-link {
+  padding: 2rem;
+  background: var(--main-gray);
+  color: var(--main-white);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.course-link:hover {
+  background: var(--main-blue);
+}
+
+.review-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+form button {
+  padding: 1rem;
+  background-color: var(--main-red);
+  border: none;
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--main-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
   nav {
-    background-color: var(--main-red);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+      padding: 0.5rem; /* Smaller padding for mobile */
   }
-  
-  .nav-list li {
-    display: flex;
-    justify-content:space-around;
-    margin: auto;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-list a {
-    color: var(--main-white);
-    text-decoration: none;
-    font-size: 1.8rem;
-  }
-  
-  .welcome-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-    text-align: center;
-  }
-  
-  blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-top: 2rem;
-    color: var(--main-red);
-  }
-  
-  .courses-section, .reviews-section, .contact-section {
-    padding: 5rem 2rem;
-    text-align: center;
-  }
-  
-  .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-  }
-  
-  .course-link {
-    padding: 2rem;
-    background: var(--main-gray);
-    color: var(--main-white);
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .course-link:hover {
-    background: var(--main-blue);
-  }
-  
-  .review-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  form input, form textarea {
-    padding: 1rem;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-  }
-  
-  form button {
-    padding: 1rem;
-    background-color: var(--main-red);
-    border: none;
-    color: var(--main-white);
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: var(--main-blue);
-  }
-  ul {
-    list-style: none;
-  }
+
   .nav-list {
-    list-style: none; /* Removes bullets */
-    display: flex;
+      flex-direction: column; /* Stacks the nav links vertically on mobile */
+      text-align: center;
   }
+
+  .nav-list a {
+      font-size: 1.5rem; /* Smaller font for mobile */
+      padding: 0.5rem 0; /* Adds padding for touch targets */
+  }
+
+  .welcome-section {
+      padding: 1rem; /* Ensures the welcome section fits on smaller screens */
+  }
+
+  .courses-section, .reviews-section, .contact-section {
+      padding: 2rem 1rem; /* Reduce padding for mobile */
+  }
+
+  .course-link {
+      padding: 1.5rem; /* Smaller padding for course links on mobile */
+  }
+
+  form input, form textarea {
+      padding: 0.8rem; /* Slightly smaller input padding on mobile */
+  }
+
+  form button {
+      padding: 0.8rem; /* Smaller button padding */
+  }
+
   footer p {
-    text-align: center;
+      font-size: 0.9rem; /* Adjust footer font size for mobile */
   }
+}
+
+@media (max-width: 480px) {
+  .nav-list a {
+      font-size: 1.2rem; /* Even smaller font size for very small screens */
+  }
+
+  h1, h2 {
+      font-size: 1.8rem; /* Adjust heading sizes for smaller phones */
+  }
+
+  .course-link {
+      font-size: 1.2rem; /* Adjust course link font size */
+  }
+
+  .welcome-section {
+      padding: 0.5rem; /* Reduce padding further on very small screens */
+  }
+
+  blockquote {
+      font-size: 1.2rem; /* Smaller blockquote for readability */
+  }
+}
