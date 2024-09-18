@@ -171,24 +171,34 @@ footer p {
   }
 }
 
-@media (max-width: 480px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  .nav-list {
+    flex-direction: column; /* Stack the navigation links vertically */
+    align-items: center; /* Center the links */
+  }
+
+  .nav-list li {
+    margin: 1rem 0; /* Add margin to space out the links */
+    width: 100%;
+    text-align: center;
+  }
+
   .nav-list a {
-      font-size: 1.2rem; /* Even smaller font size for very small screens */
+    font-size: 1.6rem; /* Slightly smaller font size for mobile */
+    padding: 0.5rem 1rem; /* Add padding for better touch experience */
+    width: 100%;
   }
-
+  
   h1, h2 {
-      font-size: 1.8rem; /* Adjust heading sizes for smaller phones */
-  }
-
-  .course-link {
-      font-size: 1.2rem; /* Adjust course link font size */
+    font-size: 1.8rem; /* Reduce the header size for smaller screens */
   }
 
   .welcome-section {
-      padding: 0.5rem; /* Reduce padding further on very small screens */
-  }
-
-  blockquote {
-      font-size: 1.2rem; /* Smaller blockquote for readability */
+    padding-top: 8rem; /* Adjust padding to prevent overlap */
   }
 }
