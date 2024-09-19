@@ -1,0 +1,126 @@
+/* Variables */
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+  }
+  
+
+/* Colorful Hover Effects and Enhancements */
+
+/* Navbar Link Hover Effect */
+.nav-list a:hover {
+    color: var(--main-red);
+    background-color: var(--main-white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  
+  .projects-section {
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    padding: 4rem 2rem;
+  }
+  
+  /* Milestones Project Cards Enhancement */
+  .projects-grid .project {
+    background-color: #3e4a59;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .projects-grid .project:hover {
+    transform: scale(1.05);
+    background-color: var(--main-blue);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Footer Style Enhancement */
+  footer {
+    background-color: var(--main-gray);
+    padding: 2rem;
+    text-align: center;
+    color: var(--main-white);
+    border-top: 2px solid var(--main-red);
+  }
+  
+  footer p {
+    color: #ffaf7b;
+  }
+  
+  /* Section Title Styles */
+  h2.projects-section-header {
+    color: var(--main-red);
+    font-size: 2.5rem;
+    position: relative;
+  }
+  
+  h2.projects-section-header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--main-blue);
+    margin: 0.5rem auto 0;
+  }
+  
+  /* Project Links Hover Effect */
+  .project-link {
+    background: #4a6572;
+    color: var(--main-white);
+    border: 2px solid var(--main-red);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    border-color: var(--main-blue);
+    transform: translateY(-5px);
+  }
+  
+  /* Certification Section */
+  .contact-section ul li {
+    color: var(--main-red);
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  .contact-section ul li::before {
+    color: var(--main-blue);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+  }
+  
+  /* Form Input Focus Effect */
+  form input:focus, form textarea:focus {
+    outline: none;
+    border: 2px solid var(--main-blue);
+    background-color: #e8e8e8;
+  }
+  
+  /* Submit Button Hover Effect */
+  form button:hover {
+    background-color: #ff6f61;
+    transform: translateY(-3px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Add More Vivid Transitions */
+  .courses-grid .course-link:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+  
+  
